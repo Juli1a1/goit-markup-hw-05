@@ -135,12 +135,20 @@ letter-spacing: 0.02em;
 font-weight: 500;
 padding: 24px 0;
 position: relative;
-transition: background-color 250ms var(--animaticion);
+transition: color 250ms var(--animaticion);
+}
+ 
+.links{
+color: var(--color-primary)
 }
 
 .header-link:hover, 
 .header-link:focus {
 color: var(--color-brand);
+
+transition-property: color;
+transition-duration: 250ms;
+transition-timing-function: var(--animaticion);
 }
 
  
@@ -149,10 +157,9 @@ font-weight: 400;
 letter-spacing: 0.02em;
 font-size: 16px;
 line-height: 1.5;
-color: var(--color-secondary);
+color: var(--color-primary);
 text-decoration: none;
 padding: 24px 0;
-transition: background-color 250ms var(--animaticion);
 }
 
 .card::after {
@@ -166,6 +173,7 @@ content: "";
 left: 0;
 bottom: 0;
 
+
 transition: background-color 250ms var(--animaticion);
 }
 
@@ -175,6 +183,8 @@ transition: background-color 250ms var(--animaticion);
 .header-adress:hover, 
 .header-adress:focus{
 color: var(--color-brand);
+
+transition: color, 250ms, var(--animaticion);
 }
 
 .adress {
@@ -350,7 +360,7 @@ order: 1;
 flex-grow: 0;
 
 
-transition:background-color, 250ms, cubic-bezier(0.4, 0, 0.2, 1), opasity;
+transition: background-color color 250ms cubic-bezier(0.4, 0, 0.2, 1) opacity;
 }
 
 .button-alles:focus{
@@ -395,13 +405,15 @@ font-family: 'Roboto',sans-serif;
 }
 
 .image-strength {
+display: block;
 text-decoration: none;
 }
 
 .image-strength:hover{
-display: block;
 box-shadow: 0px 1px 6px rgb(46 47 66 / 8%),
 0px 1px 1px rgb(46 47 66 / 16%), 0px 2px 1px rgb(46 47 66 / 8%);
+
+transition: box-shadow 250ms var(--animaticion);
 }
 
 
@@ -614,18 +626,13 @@ border: 1px solid  var(--color-icon-costumers);
 border-radius: 4px;
 fill:var(--color-icon-costumers);
 
-transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: border fill 250ms var(--animaticion);
 }
 
 .link-costumers:hover,
 .link-costumers:focus{
 fill: var(--color-brand);
 border: 1px solid var(--color-brand);
-border-radius: 4px;
-
-transition: border fill 250ms var(--animaticion);
 }
 
 
@@ -855,39 +862,45 @@ width: 24px;
 position: absolute;
 top: 24px;
 right: 24px;
+
+    
 }
 
 .button-modal:hover,
-.button-modal:focus
+.button-modal:focus 
  {
 background-color: var(--color-brand);
-
+color: var(--color-button-title);
+fill: currentColor;
 cursor: pointer;
 
-transition: background-color 250ms var(--animaticion) fill;
+transition: background-color 250ms var(--animaticion);
 }
 
 
 
 .button-close {
+
+
+}
+
+.closes:hover{
+/* fill: var(--color-button-title); */
+
+}
+
+.closes{
 display: flex;
 position: absolute;
 width: 8px;
 height: 8px;
 left: 8px;
 right: 8px;
-fill: var(--color-primary);
+stroke: currentColor;
+fill: currentColor;
 }
 
-.button-close:hover{
-fill: var(--color-button-title);
-}
 
-.closes{
-/* display: flex;
-align-items: center;
-justify-content: center; */
-}
 
 
 
