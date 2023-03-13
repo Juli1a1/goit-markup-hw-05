@@ -127,7 +127,7 @@ gap: 40px;
 }
 
 .header-link {
-color: var(--color-primary);
+color: var(--color-brand-second);
 text-decoration: none;
 font-size: 16px;
 line-height: 1.5;
@@ -135,6 +135,7 @@ letter-spacing: 0.02em;
 font-weight: 500;
 padding: 24px 0;
 position: relative;
+transition: background-color 250ms var(--animaticion);
 }
 
 .header-link:hover, 
@@ -143,29 +144,6 @@ color: var(--color-brand);
 }
 
  
-
-.header-link::after{
-width: 100%;
-height: 4px;
-background-color: var(--color-brand);
-border-radius: 2px;
-position: absolute;
-bottom: 0;
-content: "";
-left: 0;
-bottom: 0;
-/* opacity: 1; */
-transform: scale(1);
-transition: transform 250ms var(--animaticion);
-}
-
-.header-link:hover::after, 
-.header-link:focus::after{
-display: block;
-transform: scale(0);
-/* opacity: 0; */
-}
-
 .header-adress {
 font-weight: 400;
 letter-spacing: 0.02em;
@@ -174,10 +152,10 @@ line-height: 1.5;
 color: var(--color-secondary);
 text-decoration: none;
 padding: 24px 0;
-position: relative;
+transition: background-color 250ms var(--animaticion);
 }
 
-.header-adress::after {
+.card::after {
 width: 100%;
 height: 4px;
 background-color: var(--color-brand);
@@ -187,16 +165,12 @@ bottom: 0;
 content: "";
 left: 0;
 bottom: 0;
-transform: scale(0);
-transition: transform 250ms var(--animaticion);
+
+transition: background-color 250ms var(--animaticion);
 }
 
 
-.header-adress:hover::after, 
-.header-adress:focus::after{
-display: block;
-transform: scale(1);
-}
+
 
 .header-adress:hover, 
 .header-adress:focus{
@@ -594,7 +568,7 @@ border-radius: 50%;
 
 position: absolute;
 opacity: 1;
-transition: opacity 250ms var(--animaticion);
+transition: background-color 250ms var(--animaticion);
 }
 
 .social-link:hover,
@@ -649,7 +623,10 @@ transition-property: background-color;
 .link-costumers:focus{
 fill: var(--color-brand);
 border: 1px solid var(--color-brand);
-border-radius: 4px;}
+border-radius: 4px;
+
+transition: border fill 250ms var(--animaticion);
+}
 
 
 
@@ -777,6 +754,7 @@ opacity: 1;
 .social-footer-link:focus{
 background-color: var(--color-social-footer);
 opacity: 2;
+
 }
 
 .social-items {
@@ -879,10 +857,19 @@ top: 24px;
 right: 24px;
 }
 
+.button-modal:hover,
+.button-modal:focus
+ {
+background-color: var(--color-brand);
+
+cursor: pointer;
+
+transition: background-color 250ms var(--animaticion) fill;
+}
 
 
 
-.button-close{
+.button-close {
 display: flex;
 position: absolute;
 width: 8px;
@@ -892,6 +879,9 @@ right: 8px;
 fill: var(--color-primary);
 }
 
+.button-close:hover{
+fill: var(--color-button-title);
+}
 
 .closes{
 /* display: flex;
