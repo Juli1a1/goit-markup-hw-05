@@ -161,7 +161,7 @@ color: var(--color-primary);
 text-decoration: none;
 padding: 24px 0;
 
-transition: color, 250ms, var(--animaticion);
+transition: color 250ms var(--animaticion);
 }
 
 .card::after {
@@ -374,12 +374,8 @@ background: var(--color-brand);
 .button-alles:hover{
 background: var(--color-brand);
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-border-radius: 4px;
 color: var(--color-button-title);
-letter-spacing: 0.04em;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
+
 }
 
 
@@ -885,8 +881,14 @@ transition: background-color 250ms var(--animaticion);
 
 
 .button-close {
-
-
+width: 8px;
+height: 8px;
+display: flex;
+position: absolute;
+left: 8px;
+right: 8px;
+stroke: currentColor;
+fill: currentColor;
 }
 
 .closes:hover{
@@ -895,14 +897,7 @@ transition: background-color 250ms var(--animaticion);
 }
 
 .closes{
-display: flex;
-position: absolute;
-width: 8px;
-height: 8px;
-left: 8px;
-right: 8px;
-stroke: currentColor;
-fill: currentColor;
+
 }
 
 
